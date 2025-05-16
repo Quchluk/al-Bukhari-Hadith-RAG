@@ -5,13 +5,6 @@ A Retrieval-Augmented Generation (RAG) application that answers natural-language
 ---
 
 
-📸 **Demo**
-
-![Ask al-Bukhari demo](assets/demo.png)
-
----
-
-
 ## 🚀 Features
 
 * Search over **7,000+ normalized hadiths** from Sahih al-Bukhari
@@ -19,6 +12,12 @@ A Retrieval-Augmented Generation (RAG) application that answers natural-language
 * Real-time **Q\&A interface** in your browser via Streamlit
 * Source metadata shown: volume, book, narrator, number
 * Reproducible pipeline for building your own index from raw data
+
+---
+
+📸 **Demo**
+
+![Ask al-Bukhari demo](assets/demo.png)
 
 ---
 
