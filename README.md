@@ -4,6 +4,14 @@ A Retrieval-Augmented Generation (RAG) application that answers natural-language
 
 ---
 
+
+📸 **Demo**
+
+![Ask al-Bukhari demo](assets/demo.png)
+
+---
+
+
 ## 🚀 Features
 
 * Search over **7,000+ normalized hadiths** from Sahih al-Bukhari
