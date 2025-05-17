@@ -2,9 +2,9 @@ import json
 import re
 
 def clean_text(text):
-    text = text.replace('\r', ' ').replace('\n', ' ')  # убираем переносы
+    text = text.replace('\r', ' ').replace('\n', ' ') 
     text = text.replace('\\"', '"').replace("“", '"').replace("”", '"')
-    text = re.sub(r'\s+', ' ', text)  # несколько пробелов → один
+    text = re.sub(r'\s+', ' ', text) 
     return text.strip()
 
 def extract_number(info_field):
@@ -37,7 +37,6 @@ def normalize_hadiths(input_path, output_path):
                     }
                 })
 
-    # Сохраняем в формате JSONL
     with open(output_path, 'w', encoding='utf-8') as f:
         for entry in normalized:
             f.write(json.dumps(entry, ensure_ascii=False) + "\n")
