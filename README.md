@@ -118,6 +118,10 @@ The reward of establishing prayers on the night of Qadr (Laylat al-Qadr) out of 
 
 ---
 
+📌 **All hadiths — including book numbers, hadith numbers, and narrators — match the structure of [sahih-bukhari.com](http://www.sahih-bukhari.com) and can be cross-verified there.**
+
+⸻
+
 ## ▶️ Quick Start
 
 ```bash
@@ -141,20 +145,23 @@ Open http://localhost:8501 in your browser.
 
 🧱 Repository Structure
 
+```
 al-bukhari-rag/
-├── app.py                         # Streamlit app
-├── build\_index.py                # Build FAISS index from normalized data
-├── faiss\_index/                  # Prebuilt FAISS index (optional or downloadable)
+├── app.py                   # Streamlit app
+├── build_index.py           # Builds FAISS index from normalized JSONL
+├── faiss_index/             # Optional prebuilt FAISS index (index.faiss, index.pkl)
 ├── Data/
-│   └── sahih\_bukhari\_normalized.jsonl
+│   ├── sahih_bukhari.json               # Raw data (optional)
+│   └── sahih_bukhari_normalized.jsonl  # Normalized JSONL (one hadith per line)
 ├── preprocessing/
-│   ├── normalize\_hadiths.py      # Normalizes raw data into flat JSONL
-│   └── README.md                 # Explanation of preprocessing steps
+│   ├── normalize_hadiths.py # Script for normalizing the hadiths
+│   └── README.md            # Explanation of preprocessing
 ├── requirements.txt
-├── .env.example                  # Environment variable template
+├── .env.example             # Template for environment config
 ├── .gitignore
 ├── LICENSE
-└── README.md                     # This file
+└── README.md                # This file
+```
 
 ⸻
 
