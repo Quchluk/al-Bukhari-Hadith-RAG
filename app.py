@@ -6,14 +6,14 @@ from langchain_community.embeddings import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
 from langchain.chains import RetrievalQA
 
-# === Загрузка переменных из .env ===
+#from .env 
 load_dotenv()
 assert "OPENAI_API_KEY" in os.environ, "OPENAI_API_KEY не найден в .env файле"
 
-# === Пути ===
+#path
 DB_PATH = "/Users/Tosha/Desktop/al-Buhari RAG application/faiss_index"
 
-# === Инициализация моделей ===
+#model
 embeddings = OpenAIEmbeddings()
 vectorstore = FAISS.load_local(
     folder_path=DB_PATH,
@@ -30,7 +30,7 @@ qa = RetrievalQA.from_chain_type(
     return_source_documents=True
 )
 
-# === Интерфейс Streamlit ===
+#Streamlit
 st.set_page_config(page_title="Ask al-Bukhari", layout="wide")
 st.title("📖 Ask al-Bukhari — RAG Question Answering")
 
