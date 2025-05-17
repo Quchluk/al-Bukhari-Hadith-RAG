@@ -22,6 +22,17 @@ Built with **LangChain**, **OpenAI embeddings**, **FAISS vector search**, and **
 
 ---
 
+## 📚 Data Source
+
+Hadith content was adapted from the open-source dataset  
+[essaji/Complete-Sahih-Bukhari-Json](https://github.com/essaji/Complete-Sahih-Bukhari-Json), with extensive normalization and indexing performed manually.
+
+All references — including **volume, book number, hadith number, and narrator names** — follow the exact structure of [sahih-bukhari.com](http://www.sahih-bukhari.com).  
+This ensures that **every retrieved hadith can be easily verified** by cross-checking with the corresponding page on that website.  
+Just copy the reference and look it up directly at sahih-bukhari.com to confirm the source.
+
+---
+
 ## 🧪 Example Queries and Real Responses
 
 ### 📖 What breaks the fast during Ramadan?
