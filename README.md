@@ -1,6 +1,6 @@
 # 🕌 al-Bukhari Hadith RAG
 
-A Retrieval-Augmented Generation (RAG) application that answers natural-language questions based on **Sahih al-Bukhari**.  
+A Retrieval-Augmented Generation (RAG) application that answers natural-language questions based on **Sahih al-Bukhari**.
 Built with **LangChain**, **OpenAI embeddings**, **FAISS vector search**, and **Streamlit**.
 
 > ⚡️ Ideal for multilingual and domain-specific retrieval tasks in Digital Humanities and Islamic NLP.
@@ -13,90 +13,107 @@ Built with **LangChain**, **OpenAI embeddings**, **FAISS vector search**, and **
 
 ## 🚀 Features
 
-- ✅ **7,000+ normalized hadiths** from Sahih al-Bukhari  
-- 🔎 **Semantic search** using FAISS + OpenAI embeddings  
-- 📚 **Source metadata** shown: volume, book, narrator, number  
-- 🧠 Fully functional **Retrieval-Augmented Generation pipeline**  
-- ⚙️ **Reproducible index-building** pipeline from raw JSON  
-- 🌐 **Streamlit interface** — ask questions in natural language via browser  
+* ✅ **7,000+ normalized hadiths** from Sahih al-Bukhari
+* 🔎 **Semantic search** using FAISS + OpenAI embeddings
+* 📚 **Source metadata** shown: volume, book, narrator, number
+* 🧠 Fully functional **Retrieval-Augmented Generation pipeline**
+* ⚙️ **Reproducible index-building** pipeline from raw JSON
+* 🌐 **Streamlit interface** — ask questions in natural language via browser
 
 ---
 
-## 📚 Data Source
+## 📚 About the Dataset: Sahih al-Bukhari
 
-Hadith content was adapted from the open-source dataset  
-[essaji/Complete-Sahih-Bukhari-Json](https://github.com/essaji/Complete-Sahih-Bukhari-Json), with extensive normalization and indexing performed manually.
+This project is based on the full content of **Sahih al-Bukhari**, one of the most authentic and respected hadith collections in Sunni Islam. Compiled by the scholar **Imam Muhammad ibn Ismail al-Bukhari** (d. 870 CE), the book contains over **7,000 hadiths**, including repetitions, and covers a wide range of topics relevant to Islamic belief, law, worship, ethics, and daily life.
 
-All references — including **volume, book number, hadith number, and narrator names** — follow the exact structure of [sahih-bukhari.com](http://www.sahih-bukhari.com).  
-This ensures that **every retrieved hadith can be easily verified** by cross-checking with the corresponding page on that website.  
-Just copy the reference and look it up directly at sahih-bukhari.com to confirm the source.
+The collection is organized into **93 thematic books** (*kutub*), such as:
+
+* Book 1: Revelation (*Kitāb Badʾ al-Waḥy*)
+* Book 4: Ablution (*Kitāb al-Wuḍūʾ*)
+* Book 69: Drinks (*Kitāb al-Ashriba*)
+* Book 77: Dress (*Kitāb al-Libās*)
+  ...and many others.
+
+### 📥 Data Source
+
+The base dataset was adapted from the excellent open-source repository
+👉 [essaji/Complete-Sahih-Bukhari-Json](https://github.com/essaji/Complete-Sahih-Bukhari-Json)
+
+All hadiths were normalized into a flat format, enriched with metadata (volume, book, number, narrator), and made searchable through vector indexing.
+
+---
 
 ---
 
 ## 🧪 Example Queries and Real Responses
 
-### 📖 What breaks the fast during Ramadan?
+### ❓ **What breaks the fast during Ramadan?**
 
-**Answer:**  
-The fast during Ramadan is broken by consuming food, drink, or engaging in sexual activity during the daylight hours.
+**🧠 Answer:**
 
-**Source Hadith(s):**
+> The fast during Ramadan is broken by consuming food, drink, or engaging in sexual activity during the daylight hours.
 
-1. *"When night falls from this side and the day vanishes from this side and the sun sets, then the fasting person should break his fast."*  
-   **Vol. 3 | Book 31 | No. 175 | Narrator:** Umar bin Al-Khattab
+**📌 Source Hadith(s):**
 
-2. *"Do not practice Al-Wisal..." — The Prophet replied, "I am not like any of you, for I am given food and drink (by Allah) during the night."*  
-   **Vol. 3 | Book 31 | No. 182 | Narrator:** Anas
+1. **Narrator:** *Umar bin Al-Khattab*
+   📖 *"When night falls from this side and the day vanishes from this side and the sun sets, then the fasting person should break his fast."*
+   `Vol. 3 | Book 31 | No. 175`
 
-3. *"Once the Prophet set out in the month of Ramadan. He observed fasting till he reached a place called Kadid where he broke his fast."*  
-   **Vol. 4 | Book 52 | No. 202 | Narrator:** Ibn 'Abbas
+2. **Narrator:** *Anas*
+   📖 *"Do not practice Al-Wisal..." — The Prophet replied, "I am not like any of you, for I am given food and drink (by Allah) during the night."*
+   `Vol. 3 | Book 31 | No. 182`
 
-4. *"The Fast is for Me... as he leaves his sexual desire, food and drink for My Sake."*  
-   **Vol. 9 | Book 93 | No. 584 | Narrator:** Abu Huraira
+3. **Narrator:** *Ibn 'Abbas*
+   📖 *"Once the Prophet set out in the month of Ramadan. He observed fasting till he reached a place called Kadid where he broke his fast."*
+   `Vol. 4 | Book 52 | No. 202`
+
+4. **Narrator:** *Abu Huraira*
+   📖 *"The Fast is for Me... as he leaves his sexual desire, food and drink for My Sake."*
+   `Vol. 9 | Book 93 | No. 584`
 
 ---
 
 ### 📖 What should one say before sleeping?
 
-**Answer:**  
-Before sleeping, one can say the following supplication:  
-**"Bismika Rabbi wada'tu Janbi wa bika arfa'uhu, In amsakta nafsi farhamha wa in arsaltaha fahfazha bima tahfazu bihi ibadakas-salihin."**  
-Additionally:  
+**Answer:**
+Before sleeping, one can say the following supplication:
+**"Bismika Rabbi wada'tu Janbi wa bika arfa'uhu, In amsakta nafsi farhamha wa in arsaltaha fahfazha bima tahfazu bihi ibadakas-salihin."**
+Additionally:
 **"Allhumma bismika ahya wa amut."**
 
 **Source Hadith(s):**
 
-1. *"He should say: 'Bismika Rabbi wada'tu Janbi wa bika arfa'uhu...'"*  
+1. *"He should say: 'Bismika Rabbi wada'tu Janbi wa bika arfa'uhu...'"*
    **Vol. 8 | Book 75 | No. 332 | Narrator:** Abu Huraira
 
-2. *"If anyone of you feels drowsy while praying, he should sleep..."*  
+2. *"If anyone of you feels drowsy while praying, he should sleep..."*
    **Vol. 1 | Book 4 | No. 212 | Narrator:** Anas
 
-3. *"If anyone of you feels drowsy while praying he should go to bed..."*  
+3. *"If anyone of you feels drowsy while praying he should go to bed..."*
    **Vol. 1 | Book 4 | No. 211 | Narrator:** Aisha
 
-4. *"When the Prophet went to bed, he used to say: 'Allhumma bismika ahya wa amut.'..."*  
+4. *"When the Prophet went to bed, he used to say: 'Allhumma bismika ahya wa amut.'..."*
    **Vol. 9 | Book 93 | No. 491 | Narrator:** Juhaifa
 
 ---
 
 ### 📖 What is the reward of night prayer?
 
-**Answer:**  
+**Answer:**
 The reward of establishing prayers on the night of Qadr (Laylat al-Qadr) out of sincere faith and hoping to attain Allah's rewards is that all past sins will be forgiven.
 
 **Source Hadith(s):**
 
-1. *"The reward of a prayer in congregation is twenty five times greater...*"  
+1. *"The reward of a prayer in congregation is twenty five times greater...*"
    **Vol. 1 | Book 11 | No. 621 | Narrator:** Abu Salama bin 'Abdur Rahman
 
-2. *"A prayer performed in congregation is twenty-five times more superior..."*  
+2. *"A prayer performed in congregation is twenty-five times more superior..."*
    **Vol. 6 | Book 60 | No. 241 | Narrator:** Ibn Al-Musaiyab
 
-3. *"Whoever establishes the prayers on the night of Qadr... all his past sins will be forgiven."*  
+3. *"Whoever establishes the prayers on the night of Qadr... all his past sins will be forgiven."*
    **Vol. 1 | Book 2 | No. 34 | Narrator:** Abu Huraira
 
-4. *"If the people knew what is the reward of making the call (for the prayer)..."*  
+4. *"If the people knew what is the reward of making the call (for the prayer)..."*
    **Vol. 3 | Book 48 | No. 854 | Narrator:** Abu Huraira
 
 ---
@@ -118,6 +135,7 @@ Run the app:
 streamlit run app.py
 
 Open http://localhost:8501 in your browser.
+```
 
 ⸻
 
@@ -125,12 +143,12 @@ Open http://localhost:8501 in your browser.
 
 al-bukhari-rag/
 ├── app.py                         # Streamlit app
-├── build_index.py                # Build FAISS index from normalized data
-├── faiss_index/                  # Prebuilt FAISS index (optional or downloadable)
+├── build\_index.py                # Build FAISS index from normalized data
+├── faiss\_index/                  # Prebuilt FAISS index (optional or downloadable)
 ├── Data/
-│   └── sahih_bukhari_normalized.jsonl
+│   └── sahih\_bukhari\_normalized.jsonl
 ├── preprocessing/
-│   ├── normalize_hadiths.py      # Normalizes raw data into flat JSONL
+│   ├── normalize\_hadiths.py      # Normalizes raw data into flat JSONL
 │   └── README.md                 # Explanation of preprocessing steps
 ├── requirements.txt
 ├── .env.example                  # Environment variable template
@@ -138,14 +156,13 @@ al-bukhari-rag/
 ├── LICENSE
 └── README.md                     # This file
 
-
 ⸻
 
 🧠 Using the Prebuilt Index
 
 If using the bundled FAISS index:
 
-FAISS.load_local(path, embeddings, allow_dangerous_deserialization=True)
+FAISS.load\_local(path, embeddings, allow\_dangerous\_deserialization=True)
 
 Or you can build it yourself (see below).
 
@@ -153,22 +170,25 @@ Or you can build it yourself (see below).
 
 🛠 Rebuilding the Index
 
+```bash
 python preprocessing/normalize_hadiths.py \
   --input Data/sahih_bukhari_raw.json \
   --output Data/sahih_bukhari_normalized.jsonl
 
 python build_index.py
+```
 
-To swap out OpenAI for HuggingFace or other models, modify the embedding class in build_index.py.
+To swap out OpenAI for HuggingFace or other models, modify the embedding class in build\_index.py.
 
 ⸻
 
 💡 Applications
-	•	🧾 Islamic Knowledge QA systems
-	•	🌍 Multilingual low-resource RAG pipelines
-	•	🏛 Digital Humanities research
-	•	📚 Educational bots based on classical texts
-	•	🧪 Experimentation with domain-specific vector search
+
+* 🧾 Islamic Knowledge QA systems
+* 🌍 Multilingual low-resource RAG pipelines
+* 🏛 Digital Humanities research
+* 📚 Educational bots based on classical texts
+* 🧪 Experimentation with domain-specific vector search
 
 ⸻
 
