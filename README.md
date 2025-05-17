@@ -43,8 +43,6 @@ All hadiths were normalized into a flat format, enriched with metadata (volume, 
 
 ---
 
----
-
 ## 🧪 Example Queries and Real Responses
 
 ### ❓ **What breaks the fast during Ramadan?**
@@ -120,7 +118,7 @@ The reward of establishing prayers on the night of Qadr (Laylat al-Qadr) out of 
 
 📌 **All hadiths — including book numbers, hadith numbers, and narrators — match the structure of [sahih-bukhari.com](http://www.sahih-bukhari.com) and can be cross-verified there.**
 
-⸻
+---
 
 ## ▶️ Quick Start
 
@@ -141,7 +139,7 @@ streamlit run app.py
 Open http://localhost:8501 in your browser.
 ```
 
-⸻
+---
 
 🧱 Repository Structure
 
@@ -163,7 +161,7 @@ al-bukhari-rag/
 └── README.md                # This file
 ```
 
-⸻
+---
 
 🧠 Using the Prebuilt Index
 
@@ -173,7 +171,7 @@ FAISS.load\_local(path, embeddings, allow\_dangerous\_deserialization=True)
 
 Or you can build it yourself (see below).
 
-⸻
+---
 
 🛠 Rebuilding the Index
 
@@ -187,7 +185,7 @@ python build_index.py
 
 To swap out OpenAI for HuggingFace or other models, modify the embedding class in build\_index.py.
 
-⸻
+---
 
 💡 Applications
 
@@ -197,7 +195,7 @@ To swap out OpenAI for HuggingFace or other models, modify the embedding class i
 * 📚 Educational bots based on classical texts
 * 🧪 Experimentation with domain-specific vector search
 
-⸻
+---
 
 📚 Data Source
 
@@ -206,14 +204,14 @@ essaji/Complete-Sahih-Bukhari-Json
 
 All other code, normalization, interface, and indexing steps are original.
 
-⸻
+---
 
 🛡 License
 
 This project is licensed under the MIT License.
 See the LICENSE file for full terms.
 
-⸻
+---
 
 👤 Author
 
